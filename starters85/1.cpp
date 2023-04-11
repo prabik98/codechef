@@ -28,6 +28,6 @@ void io(){
 int main(){
     void io();
 
-    cout<<"Welcome"<<endl;
+    cout<<"Running"<<endl;
     return 0;
 }
