@@ -25,19 +25,30 @@ void io(){
     cin.tie(NULL); cout.tie(NULL);
 }
 
+int modBigNumber(string num, ll m){
+    vi vec;
+    ll modi = 0;
+    for (int i = 0; i < num.size(); i++) {
+        int digit = num[i] - '0';
+        modi = modi * 10 + digit;
+        int quo = modi / m;
+        vec.push_back(quo);
+        modi = modi % m;       
+    }
+    return modi;
+}
+
 int main(){
     void io();
 
     ll t;
     cin >> t;
     while(t--){
-        ll n, m;
-        cin >> n >> m;
-        if(n<=m){
-            cout<<0<<endl;
-        }
-        else cout<<(n-m)<<endl;
+        string num;
+        cin>>num;
+        ll m=20;
+        ll modi = modBigNumber(num, m);
+        cout<<modi<<endl;
     }
-
     return 0;
 }

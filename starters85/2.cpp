@@ -31,12 +31,12 @@ int main(){
     ll t;
     cin >> t;
     while(t--){
-        ll n, m;
-        cin >> n >> m;
-        if(n<=m){
-            cout<<0<<endl;
+        ll x, y;
+        cin >> x >> y;
+        if(15*x < 2*y){
+            cout<<"NO"<<endl;
         }
-        else cout<<(n-m)<<endl;
+        else cout<<"YES"<<endl;
     }
 
     return 0;

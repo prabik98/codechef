@@ -31,13 +31,18 @@ int main(){
     ll t;
     cin >> t;
     while(t--){
-        ll n, m;
-        cin >> n >> m;
-        if(n<=m){
-            cout<<0<<endl;
+        ll n, ans=0;
+        cin >> n;
+        if(n == 1 || n == 2){
+            cout<<"0"<<endl;
+            continue;
         }
-        else cout<<(n-m)<<endl;
+        else if(n%2==0){
+            ans =((n-4)/2)*3 + 3;
+        }
+        else
+            ans=((n-3)/2)*3 + 2;
+        cout<<ans<<endl;
     }
-
     return 0;
 }

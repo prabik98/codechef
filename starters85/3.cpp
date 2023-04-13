@@ -31,13 +31,16 @@ int main(){
     ll t;
     cin >> t;
     while(t--){
-        ll n, m;
-        cin >> n >> m;
-        if(n<=m){
-            cout<<0<<endl;
+        ll n, count=0, runs=0;
+        cin >> n;
+        ll a[n];
+        for(ll i = 1; i <= n; i++){
+            cin >> a[i-1];
+            runs+=a[i-1];
+            if(runs==i)
+                count++;
         }
-        else cout<<(n-m)<<endl;
+        cout << count <<endl;
     }
-
     return 0;
 }
