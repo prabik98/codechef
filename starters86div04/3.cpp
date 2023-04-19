@@ -28,9 +28,24 @@ void io(){
 int main(){
     void io();
 
-    ll n;
-    cin >> n;
-    cout<< 2*n <<endl;
+    ll t;
+    cin>>t;
+    while(t--){
+
+    ll batteryLevel;
+    cin >> batteryLevel;
+
+    ll time = 0;
+    while (batteryLevel != 50) {
+        if (batteryLevel < 50) {
+            batteryLevel += 2;
+        } else {
+            batteryLevel -= 3;
+        }
+        time++;
+    }
+    cout << time << endl;
+    }
 
     return 0;
 }

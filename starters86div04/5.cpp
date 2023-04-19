@@ -28,9 +28,34 @@ void io(){
 int main(){
     void io();
 
-    ll n;
-    cin >> n;
-    cout<< 2*n <<endl;
+    ll t;
+    cin>>t;
+    while(t--){
 
+        string s;
+        cin >> s;
+        ll n = s.size();
+        ll cnt0 = 0, cnt1 = 0;
+        for (char c : s) {
+            if (c == '0') {
+                cnt0++;
+            } else {
+                cnt1++;
+            }
+        }
+        if((cnt0 == 0 && cnt1 == n) || (cnt0 == n && cnt1 == 0)){
+            cout << "Ramos"<< endl;
+        }
+            
+
+        if (n%2==0){
+            if(cnt0%2 == 0)
+                cout << "Ramos" << endl;
+            else cout << "Zlatan" << endl;
+        }
+        else{
+                cout << "Ramos" << endl;
+        }
+    }
     return 0;
 }
