@@ -22,7 +22,7 @@ typedef unsigned long long int  uint64;
 
 void io(){
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(NULL); cout.tie(NULL);
 }
 
 int main(){
@@ -33,6 +33,14 @@ int main(){
     while(t--){
         int n;
         cin>>n;
+        if(n>0 && n<11)
+            cout<<"Lower Double"<<endl;
+        if(n>10 && n<16)
+            cout<<"Lower Single"<<endl;
+        if(n>15 && n<26)
+            cout<<"Upper Double"<<endl;
+        if(n>25 && n<31)
+            cout<<"Upper Single"<<endl;
     }
 
     return 0;

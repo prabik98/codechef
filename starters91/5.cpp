@@ -22,18 +22,27 @@ typedef unsigned long long int  uint64;
 
 void io(){
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(NULL); cout.tie(NULL);
 }
 
 int main(){
     void io();
 
-    int t;
+    ll t;
     cin>>t;
     while(t--){
-        int n;
+        ll n;
         cin>>n;
+        if(n%2==0){
+            for(int i=n; i>=1; i--){
+                if(i==1)
+                    cout << i << endl;
+                else
+                    cout << i << " ";
+            }
+        }
+        else
+            cout<<"-1"<<endl;
     }
-
     return 0;
 }

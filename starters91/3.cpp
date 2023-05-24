@@ -22,18 +22,30 @@ typedef unsigned long long int  uint64;
 
 void io(){
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(NULL); cout.tie(NULL);
 }
 
 int main(){
     void io();
 
-    int t;
+    ll t;
     cin>>t;
     while(t--){
-        int n;
+        ll n;
         cin>>n;
+        string s;
+        cin>>s;
+        ll alice=0, bob=0;
+        if(s[0] == 'A'){
+            alice++;
+        }
+        for(int i=1; i<n; i++){
+            if(s[i]=='A' && s[i+1]=='A')
+                alice++;
+            else if(s[i]=='B' && s[i+1]=='B')
+                bob++;
+        }
+        cout<<alice<<" "<<bob<<endl;
     }
-
     return 0;
 }
